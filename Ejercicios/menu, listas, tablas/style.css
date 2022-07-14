@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Roboto;
+    padding: 20px;
+}
+
+.menu ul li a:hover {
+    color: blue;
+}
+
+.menu ul li {
+    margin: 20px 30px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu {
+    max-width: 90%;
+    /* para centrar */
+    margin: 0 auto;
+    background-color: #edebe1;
+}
+
+
+/* estilos de tabla */
+
+.tablas {
+    max-width: 1450px;
+    margin: 40px auto;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+@media(max-width:768px) {
+    .menu ul {
+        display: grid;
+        /* para ocultar el menu */
+        /* display: none; */
+    }
+}
