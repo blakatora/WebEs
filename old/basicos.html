@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .zoom {
+            width: 250px;
+            height: 250px;
+            transition: 1.5s;
+        }
+        
+         :root {
+            --colorvariable: #ff00f7;
+            --tamaño: 1.2;
+        }
+        
+        .zoom:hover {
+            --tamaño: 5;
+            transform: scale(var(--tamaño));
+        }
+        
+        .imagen {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            opacity: 1;
+            transition: 1s;
+        }
+        
+        .imagen:hover {
+            opacity: 0.4;
+        }
+        
+        .contenedor {
+            margin: 0 auto;
+        }
+        
+        h1 {
+            --colorvariable: #ff0000;
+            color: var(--colorvariable);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Zoom on Hover</h1>
+    <p>Hover over the div element.</p>
+
+    <div class="contenedor">
+
+
+        <div class="zoom">
+            <img src="12.jpg" alt="" class="imagen">
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

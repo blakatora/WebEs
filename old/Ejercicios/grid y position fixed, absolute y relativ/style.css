@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 'prin prin prin' 'txt txt txt' 'iz cent der';
+    justify-content: center;
+    /* para centrar cosas dentro */
+}
+
+.circuloCentrado {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    border-radius: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+    position: absolute;
+    top: 2vw;
+    left: 32vw;
+    text-align: center;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circuloCentradoFixed {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 70px;
+    width: 70px;
+    /* alinear texto a la mitad 2 */
+    text-align: center;
+    line-height: 62px;
+    background-color: #00bb2d;
+    border-radius: 70px;
+}
+
+.logo {
+    font-size: 45px;
+    color: white;
+}
+
+.fotoPrincipal {
+    position: relative;
+    grid-area: prin;
+}
+
+.contenedor .fotoPrincipal img {
+    width: 80vw;
+    height: 300px;
+}
+
+.contenedor .izquierda img,
+.contenedor .centro img,
+.contenedor .derecha img {
+    width: 20vw;
+    height: 100px;
+}
+
+.izquierda {
+    position: relative;
+    grid-area: iz;
+    text-align: right;
+}
+
+.hijo1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: red;
+}
+
+.derecha {
+    overflow: hidden;
+    grid-area: der;
+}
+
+.centro {
+    grid-area: cent;
+    text-align: center;
+}
+
+.texto {
+    text-align: center;
+    grid-area: txt;
+}
+
+.codigo {
+    background-color: azure;
+}
+
+@media (max-width:768px) {
+    .contenedor {
+        grid-template-areas: 'prin' 'txt' 'iz' 'cent' 'der';
+    }
+    .contenedor .izquierda,
+    .contenedor .centro,
+    .contenedor .derecha {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .contenedor .izquierda img,
+    .contenedor .centro img,
+    .contenedor .derecha img {
+        width: 60vw;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
